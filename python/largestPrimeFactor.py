@@ -1,4 +1,4 @@
-#the number you want the prime factorization of
+#nt the prime factorization of
 number=600851475143
 
 #indexes for loops
@@ -10,17 +10,9 @@ prime=True
 
 max=0
 
-#logic for getting all the prime numbers needed
-for i in range(2,number/2):
-	for k in range(1,i):	
-		if(i%k==0 and (k!=1 and k!=i)):
-			prime=False
-	
-	if(prime==True and number%i==0):
-			max=i
-			print max
-		
-	if(prime==False):
-		prime=True	
 
-print max
+while (i*i < number):
+    while number%i==0:
+        number=number/i
+    i=i+1
+print (number)
